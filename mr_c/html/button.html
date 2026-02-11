@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Make a button</title>
+		<link rel="stylesheet" href="../css/home.css">
+	</head>
+	
+	<body>
+	
+	<script src="../js/home.js"></script>
+	
+	<div class="topnav">
+		<a href="../index.html">Home</a>
+		<a href="tutorials.html">Tutorials</a>
+		<a href="showcase.html">Showcase</a>
+	</div> 
+	
+
+	<div>
+		<h2>Simple Number Counter</h2>
+		<hr>
+		<h3>Create your files</h3>
+		<pre>You will need 2 files:
+		- counter.html
+		- counter.js
+		</pre>
+		<pre>
+		Visual Studio Code to create new files, save as.
+		</pre>
+		<br><hr>
+
+		<h3>Open your file in chrome</h3>
+		<pre>find counter.html in your finder app
+		- command + click
+		- open with chrome
+		- you only need to open the html page in chrome
+		</pre>
+
+		<h3>Open your newly created files in Visual Studio Code (They will be empty)</h3>
+		<pre>You will need both files:
+		- counter.html
+		- counter.js
+		</pre>
+
+		<h3>STOP! Check in.</h3>
+		<pre>At this point you will have two applications running on your computer, Visual Studio and Google Chrome.
+		- In Visual Studio, make a change to you counter.html file and save it.
+			{ add this line to your file counter.html : &lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;foobar&lt;/p&gt;&lt;/body&gt;&lt;/html&gt; }
+		- Save the file counter.html in Visual Studio
+		- Open the file counter.html in google chrome, refresh the browser.
+		- You should see "foobar"
+		</pre>
+
+
+		<h3>If you are able to see foobar at this stage, continue</h3>
+		<pre>
+		- Remove the contents of the counter.html file, it should be fully empty.
+		- Navigate to mr_c/project_template
+		- open the file index_template.html in Visual Studio
+		- Copy the code verbatim (word for word) into your counter.html file.
+		</pre>
+
+		<h3>Redo these steps with javascript files</h3>
+		<pre>
+		- Navigate to mr_c/project_template
+		- open the file mr_c_counter.js in Visual Studio
+		- Copy the code verbatim (word for word) into your counter.js file.
+		</pre>
+
+		<h3>What Mr. C Means when he says "inside the body/head"</h3>
+		<img src="../media/img/inside_head_main.png" alt="inside the body/head"> 
+		<pre>
+		- Orange inside the head means that the browser will read this information and relay it, before rendering it.
+		- Red means inside the body which is where the stuff you put in your files is visualized on screen, as set by the rules you set in the head.
+		</pre>
+
+		
+		<h3>Start to use the javascript file provided</h3>
+		<pre>
+		- In Visual Studio go to counter.html
+		- In the head, 
+			- change the title to counter
+		- In the body, 
+			- change the line "&lt;script src="js/home.js"&gt;&lt;/script&gt;" to "&lt;script src="counter.js"&gt;&lt;/script&gt;"
+			- add a button that hits the the function &lt;button type="button" onclick="addOne()"&gt;Click me&lt;/button&gt;
+			- add a field to keep track of the counter &lt;p&gt;Clicks: &lt;a id="clicks"&gt;0&lt;/a&gt;&lt;/p&gt;
+		- Save in Visual Studio
+		-Refresh in google chrome
+		</pre>
+		
+		<h3>That is it..... Kinda</h3>
+		<pre>
+			- If you want to challenge your friends
+			- See who's number can go up the highest.
+			  (hint altering the javascipt function will be easier than clicking the button)
+		</pre>
+		
+	</div>
+	
+	</div> 
+	</body>
+</html>
+
+
+
+
