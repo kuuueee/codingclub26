@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Simple Animations</title>
+		<link rel="stylesheet" href="../css/home.css">
+        <link rel="stylesheet" href="../css/format.css">
+	</head>
+	
+	<body>
+	
+	<script src="../js/home.js"></script>
+    <script src="../js/style.js"></script>
+	<script src="../project_template/mr_c_counter.js"></script>
+	
+	<div class="topnav">
+		<a href="../index.html">Home</a>
+		<a href="tutorials.html">Tutorials</a>
+		<a href="showcase.html">Showcase</a>
+	</div> 
+	
+
+	<div>
+		<h2>Simple Animations</h2> 
+
+        <hr>
+		<h4>We ended last session learning about how javascript interacts with html elements and can be used to change css properties attached to these elements</h4>
+		<h3>Let's play with these effects before moving on.</h3>
+        <br>
+        <p>I'm going to try something a bit different today.
+            There will be two sets of instuctions, high level and low. You do not need to read the low level unless you want to.
+        </p>
+		<pre>
+            High level instructions:
+
+                - Navigate to <a href="../html/jumping_for_js.html">Jumping for JS</a>
+                - Learn how to use the developer console in chrome
+                - Grab your copies of this to edit for yourself from the project template folder : moveSquare.html and moveSquare.js
+                - Notice your copy of moveSquare.html has four extra buttons UpLeft, UpRight, DownLeft, DownRight.
+                - Notice your copy of moveSquare.js has four new functions : UpLeft, UpRight, DownLeft, DownRight.
+                - Add definitions to these new functions so that it does the needful (Upleft moves the square up and left)
+
+                - The results should be a html page with a square that can move in 8 directions instead of just 4.
+        </pre>
+        <br><hr><br>
+        <pre>
+            Lower level instructions:
+
+            - In <a href="../html/jumping_for_js.html">Jumping for JS</a>, right click anywhere and click inspect
+            - In the inspect menu, there is a tab called console.
+                - Anywhere your javascript calls the function : Console.Log("Text here") the text inside the quotation marks will appear in the developer console.
+            - I've named the copies of the jumping for js page available in the project_template directory with the names : 
+                    moveSquare.html
+                    moveSquare.js
+            - Take these files and start to edit them in visual studio code.
+            - Open the file moveSquare.html in google chrome
+
+            - Inside each of the undefined functions in moveSquare.js :  moveSquareUpRight, moveSquareUpLeft, moveSquareDownRight, moveSquareDownLeft
+
+                - Copy first part of the code into your undefined function from moveSquareRight()
+
+                    var env = document.getElementById(domHTMLenv); //Here we store a DOM element (HTML) by referencing the id
+                    var env_rec = env.getBoundingClientRect(); //Here we call the DOM element and ask for the positions of it's corners
+                    //Same for the square as above, we will be editing the position of the square to make it look like it's moving around.
+                    var square = document.getElementById(domHTMLdivID); 
+                    var square_rec = square.getBoundingClientRect(); 
+                    square.style.position = "absolute";
+                
+                - This bit of code tells me where the square is located in the DOM on your webpage.
+                - We need this bit of code at the start of every function to keep track of the square. It will be present in all your new functions.
+
+                - The brains of this function is in the if statement: for moveSquareRight() the if statment looks like below :
+
+                	if (check_right(env_rec, square_rec)){
+                            square.style.left = parseInt(square_rec.left + speed)+'px';
+                        }
+
+                - What this does is first checks the right bound, then moves the square to the right.
+
+                - Essentially this whole if statment does the action of moving the square to the right.
+
+                - In the function moveSquareUp() there is a similar if statment that looks exactly like below : 
+
+                    	if (check_up(env_rec, square_rec)){
+                            square.style.top = parseInt(square_rec.top - speed)+'px';
+                        }
+
+                - So if were to add these two if statments back to back, the result will be :
+                        Step 1. Check if possible to move right, if I can, I move right, if I can't I don't move right
+                        Step 2. Check if possible to move up, if I can , I move up, if I can't I don't move up.
+
+                - Combining the if statments for moveSquareRightUp would look like this : 
+
+                    if (check_right(env_rec, square_rec)){
+                       square.style.left = parseInt(square_rec.left + speed)+'px';
+                    }
+                    if (check_up(env_rec, square_rec)){
+                       square.style.top = parseInt(square_rec.top - speed)+'px';
+                    }
+                
+                - To direct the square in different directions, use different combinations of moves.
+                
+                - The program will do this seemingly instantly, so you're actually going to make it look like it's moving diagonally.
+                            ie. In a new direction.
+
+                - If you can manage to do this for one direction, continue in the next 3.
+        </pre>
+
+        
+    </div> 
+	</body>
+</html>
