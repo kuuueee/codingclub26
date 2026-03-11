@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>What CSS Does</title>
+		<link rel="stylesheet" href="../css/home.css">
+        <link rel="stylesheet" href="../css/format.css">
+        <link rel="stylesheet" href="../css/css_continued.css">
+	</head>
+	
+	<body>
+	
+	<script src="../js/home.js"></script>
+    <script src="../js/style.js"></script>
+    <script src="../js/css_continued.js"></script>
+	<script src="../project_template/mr_c_counter.js"></script>
+	
+	<div class="topnav">
+		<a href="../index.html">Home</a>
+		<a href="tutorials.html">Tutorials</a>
+		<a href="showcase.html">Showcase</a>
+	</div> 
+	
+
+	<div>
+		<h2>What CSS Does</h2> 
+
+        <hr>
+		<h4>We now hopefully know at least these three things
+        </h4>
+        <pre>
+            1. HTML handles text based elements
+            2. Javascript is how you can programatically change these elements
+            3. CSS is the layer applied to these elements that handle style
+        </pre>
+		<h3>I will demostrate below with a few things.</h3>
+        <br>
+        <p>The following element is a picture element. I've manually applied some css values, but you can manipulate the values with the text boxes below.
+        </p>
+
+        <img id="danny" src="..\media\img\Danny-devito-yearbook-photo.jpg" alt="Danny Devito Yearbook Photo">
+
+        <div class="controls">
+            <span style="display: block;">
+                <label>Height</label>
+                <input id="heightDelta" type="text" value="500" onchange="changeImgHeight('danny');"/>
+            </span>
+            <span style="display: block;">
+                <label>Width</label>
+                <input id="widthDelta" type="text" value="600" onchange="changeImgWidth('danny');"/>
+            </span>
+            <span style="display: block;">
+                <label>Border Radius %</label>
+                <input id="borderRadiusDelta" type="text" value="100" onchange="changeImgBorderRadius('danny');"/>
+            </span>
+            <pre>Note all of these need to be valid before it will change</pre>
+            <span style="display: block;">
+                <label>Border Width</label>
+                <input id="borderWidth" type="text" value="2" onchange="changeImgBorder('danny');"/>
+                <label>Border Type</label>
+                <input id="borderType" type="text" value="solid" onchange="changeImgBorder('danny');"/>
+                <label>Border Color</label>
+                <input id="borderColor" type="text" value="red" onchange="changeImgBorder('danny');"/>
+            </span>
+            <span style="display: block;">
+                <label>Border Radius %</label>
+                <input id="borderRadiusDelta" type="text" value="100" onchange="changeImgBorderRadius('danny');"/>
+            </span>
+            <span style="display: block;">
+                <label>Something</label>
+                <button type="button" disabled="true" onclick="doSomething('danny')">If you click me i'll do something!</button> 
+            </span>
+        </div>
+        <br>
+        <br>
+        <hr>
+        <br>
+
+    
+        <p>In this next tutorial you start to interact with how html elements interact with the css you apply to it</p>
+        
+
+
+		<pre>
+            High level instructions:
+                - Find an image online from one of the sources posted in the lab (I used wikimedia commons to find this sick image of Danny Devito)
+                    - Give your image a name
+                - In a new folder save the image to the name of your folder
+                    - You will have a new folder named image_name
+                        in it will be these files:
+                            {image_name}.html
+                            {image_name}.js
+                            {image_name}.css
+                            {image_name}.jpg/png/bitmap/ any image format.
+                - Create buttons that alter the way that this image is displayed on your site
+                    Ideas for this
+                    - Move the image around a grid
+                    - Flip the image upside down
+                    - Rotate the image
+        </pre>
+        <br><hr><br>
+        <pre>
+            Lower level instructions:
+                - Go to Wikimedia commons and browse for an image
+                - Save the image to a new folder
+                - Name the image and the folder the same name and put your image in your folder
+                - You will have a folder - inside the folder is an image and both will have the same name
+                - Using danny as an example:
+                    danny
+                        danny.jpg
+                - Create the three files that will host your web things
+                    danny.html
+                    danny.js
+                    danny.css
+                
+                - Copy any html page that you've already created and paste the entire document in {image_name}.html aka danny.html
+                    - Remove everything inside the body of your document
+                    - Edit the Title to reflect the image_name aka Danny
+                    - In head
+                        - Edit or add the script tags for danny.js
+                            &lt;script src="danny.js"&gt;&lt;/script&gt;
+                        - Edit or add the link tags for danny.css
+                            &lt;link rel="stylesheet" href="danny.css"&gt;
+
+                <hr>
+                - In the body of danny.html
+                        - Add the image element:
+                                &lt;img id="danny" src="..\media\img\Danny-devito-yearbook-photo.jpg" alt="Danny Devito Yearbook Photo"&gt;
+                    
+                    - Notice the id for javascript
+                    - Notice the src for the location of where you downloaded your image.
+                        - If you don't see an image look back to your folder structure
+                    
+                    - You will have to change the id from danny to your image Name
+
+                    - Add a button to your danny.html that correlates to a function in your danny.js
+                        - name it doSomething
+                        &lt;button type="button" onclick="doSomething('danny')"&gt;If you click me i'll do something!&lt;/button&gt; 
+                        - * Change the id from danny to your image name
+                        
+                <hr>
+                - In your danny.css file
+
+                        - Create image rules for your new image
+                        - The hash/pound/sharp/number sign # in your css file correlates to the id.
+
+                    -Danny looks like this, but you can alter to fit your image. Make sure to change the #name
+
+                    - #danny {
+                        width: 500px;
+                        height: 600px;
+                        border: red 2px solid;
+                    }
+                <hr>
+                - In your danny.js file
+                    
+                    - Define the function doSomething:
+
+                - Copy this into your js file:
+
+                    function doSomething(imgId) {
+                        var imageElement = document.getElementById(imgId);
+                        imageElement.style.width = "100%";
+                        imageElement.style.height = "100%";
+                        imageElement.style.objectFit = "cover";
+                    }
+
+                <hr>
+                - You just made a button that does something to your image.
+                - See what else you can make to edit this image!
+                - Follow the same steps of making a button in html and javascript but change the name of the function to "doSomethingElse"
+                - Make the button do something! Feel free to ask!
+        </pre>
+
+        
+    </div> 
+	</body>
+</html>

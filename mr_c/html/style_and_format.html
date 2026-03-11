@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Style and Format</title>
+		<link rel="stylesheet" href="../css/home.css">
+        <link rel="stylesheet" href="../css/format.css">
+	</head>
+	
+	<body>
+	
+	<script src="../js/home.js"></script>
+    <script src="../js/style.js"></script>
+	<script src="../project_template/mr_c_counter.js"></script>
+	
+	<div class="topnav">
+		<a href="../index.html">Home</a>
+		<a href="tutorials.html">Tutorials</a>
+		<a href="showcase.html">Showcase</a>
+	</div> 
+	
+
+	<div>
+		<h2>Styling html elements with cascading style sheets (css)</h2> 
+
+        <hr>
+		<h4>We ended last session learning about how javascript interacts with html</h4>
+		<h3>The next step is to learn how to use css to apply formating rules which can then also be controlled with javascript.</h3>
+		<pre>
+            A handy way of looking at websites is to describe the parts of the site with new more descriptive names.
+
+            For example, your mouse is called a cursor because it can be moved not only with a mouse, but also with your finger on a smartphone.
+
+            For us, the document that we are manipulating is called the DOM (Document object model)
+
+            In the same way your cursor can be moved by a mouse or a touch, the DOM can be manipulated by any of the files related to the document you are working on.
+
+            In this next tutorial I will have you set up three files that you will work on inside your project directory.
+            But only one Document object model will be viewed with google chrome: your no_style.html file.
+        </pre>
+    
+        <h3>Boring Prework to get your project directory set up</h3>
+
+        <pre>
+            In finder, navigate to mr_c/project_template
+
+            Grab the entire folder named : website_template and copy to your NONAME flash drive.
+
+            It should be at the same hierarchy as the folder with your name
+        </pre>
+
+        <hr>
+        <pre>
+            In finder, navigate to website_template/index.html and open index.html with chrome.
+                You should see home, style and no style. Click no style.
+
+            Notice that there is no colour, things look kind of ok, but not great.
+
+            Now click style. Notice the rainbow, things look ok, not great but much better than nothing!
+
+            Now open both style and no_style.html in visual studio and look for line 5.
+
+            You should find a line in no_style that it not in style. This line is : &lt;link rel="stylesheet" href="../css/altstyle.css"&gt;
+        </pre>
+
+        <hr>
+
+        <pre>
+            If you are not having a relevation right now, what this means is that these documents are identical except for one line : the css file that controls the html document about colour and format.
+            
+            And by editing this file, or perhaps the properties in this file with javascript we are now on our way to basic animations.
+
+            What I would like you to do right now is to open up home.css and notice how the rules are applied to the elements.
+
+            Now open up altstyle.css in visual studio and start applying diffrent rules to the elements.
+
+            You can observe any changes you make to this file by viewing no_style.html in google chrome.
+        </pre>
+
+        <pre>
+            Start by copying just the h1 element. You can change many things, but colour is the easiest for me to see immediately.
+
+            Now keep going and apply rules to every element in nostyle.html
+
+            You can do whatever you want and you are even able to change the background image. Can you figure out how do do that?
+
+        </pre>
+
+                <hr>
+
+        <p>
+            That was kind of a boring lesson but I don't think we will have much time for more today.
+            Here is some inspiration of what I wish to be able to show you how to make in the future using these basic lessons.
+
+        </p>
+
+        <h3>You can use javascript to change css values.</h3>
+        <div class="square" id="colourSquare"></div>
+        <pre>Enter a number</pre>
+        <input id="base10input" type="number" id="base10" onchange="convertbase10()">
+        <input id="base16output" type="text" id="base16" readonly="readonly">
+
+        
+    </div> 
+	</body>
+</html>
