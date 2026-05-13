@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Randomizer</title>
+		<link rel="stylesheet" href="../../css/maze.css">
+		<link rel="stylesheet" href="../../css/home.css">
+
+	</head>
+	
+	<body>
+	
+	<script src="random.js"></script>
+	
+	<div class="topnav">
+		<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1">Home</a>
+        <a href="../../html/random.html">Randomizer Tutorial</a>
+	</div> 
+	<div>
+
+    <h2>Randomizing orders of lists</h2> 
+
+    <br>
+    <br>
+
+    <pre> Enter a list of items to see the output of the function convertToArray()</pre>
+    <input type="text" id="inputText" placeholder="apple, banana, orange"/>
+
+    <button onclick="outputToArray()">Convert</button>
+
+    <pre id="output"></pre>
+
+    <pre>The output of this function is called an array. 
+            You can think of an array as a list.
+            
+        An array id defined by two [] start and close brackets to signify the begining and end to the list.
+        As well, each item in the list is seperated by a comma.
+
+            Try copying this into the text box: 
+
+            apple, bannana, orange
+
+            now try
+
+            apple bannana orange
+
+        *If you count the amount of commas in between the each of the brackets [] then and add one . This is the size of the array.
+    </pre>
+    
+    <hr>
+
+    <pre>
+        Hello,
+
+        Enter a comma seperated list of all the items that you want to randomly tier.
+    </pre>>
+    
+    <input type="text" id="tierEntry" placeholder="apple, banana, orange"/>
+
+    <button onclick="outputToTiers()">Randomize</button>
+    
+    <pre id="tierList"></pre>
+
+    <br><hr><br>
+
+    <pre>
+        NEW TIER LIST!,
+
+        Enter a comma seperated list of all the items that you want to randomly tier.
+    </pre>>
+    
+    <input type="text" id="newtierEntry" placeholder="apple, banana, orange"/>
+
+    <button onclick="newRandomTiers()">New Randomize</button>
+    
+    <pre id="newtierList"></pre>
+
+	</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Variables and Loops</title>
+		<link rel="stylesheet" href="../css/home.css">
+        <link rel="stylesheet" href="../css/format.css">
+	</head>
+	
+	<body>
+	
+	<script src="../js/home.js"></script>
+    <script src="../js/style.js"></script>
+    <script src="../js/varloops.js"></script>
+	<script src="../project_template/mr_c_counter.js"></script>
+	
+	<div class="topnav">
+		<a href="../index.html">Home</a>
+		<a href="tutorials.html">Tutorials</a>
+		<a href="showcase.html">Showcase</a>
+	</div> 
+	
+
+	<div>
+		<h2>Variables and Loops</h2> 
+
+        <hr>
+		<h4>Variables intro</h4>
+
+        </p>
+		<pre> A variable is very simple.
+              You can think of a variable as a placeholder.
+              Say you have an item in your code that you want to keep track of a number.
+              Give this item a name and it becomes a variable.
+
+                 ex.
+
+              var money_in_wallet = 5.00;
+
+              Open your console (right click chrome | click inspect), and view the state of the variable when you use the form input below.
+        </pre>
+        <br>
+        <div class="controls">
+            <span style="display: block;">
+                <label>money_in_wallet</label>
+                <input id="money_in_wallet" type="number" value="5" onchange="changeMoneyInWallet();"/>
+            </span>
+        </div>
+
+
+        <h4>Loops intro</h4>
+
+        <pre> Hopefully from your scratch days, you remember loops.
+
+            There are a few different types of loops you can use, but I find my favourite is the for loop.
+
+            Here is what a for loop could look like in scratch.
+
+            We create a variable i, set to 0. Then we repeat all the steps inside the loop until i = 5.
+
+            Within the loop, every iteration we check if i > 2. If it is turn anticlockwise 15 degrees.
+
+            Then we always move one step and increase the value of the variable i by 1.
+        </pre>
+        <span style="display: block;">
+            <img id="forscratch" src="..\media\img\forscratch.png" alt="For Loop in scratch">
+        </span>
+        <pre> 
+            This loops is literally translated to the following js.
+
+            var direction = 0;
+            for (var i = 0; i < 5; i++)
+            {
+                if (i < 2) {
+                    direction = (direction % 360) - 15;
+                }
+                console.log("When i = " + i + " - Moved one step " + direction + "°");
+            }
+
+            To break that down, we set a variable for direction that we need to keep track of and initialize it to zero.
+
+            We start the for loop by saying; 
+                - Set variable i equal to zero.
+                - Run the everything inside the bracket while i is less than 5.
+
+            By saying this; the loop will run 5 times: when i = 0, 1, 2, 3, 4. Notice i does not equal 5, and our for loop explicitly states while i is less than 5, so never while i = 5.
+
+            Below is a similar loop, but you can alter the upper variable loop bound (you can change the number 5 to whatever number you want)
+        </pre>
+
+        <div class="controls">
+            <span style="display: block;">
+                <label>loopDirections</label>
+                <input id="loopDirections" type="number" value="5" onchange="loopDirection();"/> 
+            </span>
+        </div>
+
+
+    <pre> 
+    With this, you may be able to get farther with the array randomizer
+    </pre>
+
+
+    </div> 
+	</body>
+</html>
